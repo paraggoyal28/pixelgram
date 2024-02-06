@@ -1,0 +1,99 @@
+PWA
+Progressive Web Apps
+
+Service Workers
+Javascript Running in background processes
+Caching/Offline Access
+Enable Other PWA features
+Web Push Notification
+Background Sync
+
+Application Manifest
+Allows Addition to Homescreen
+
+Responsive Design
+App/Layout should work and look good across all devices.
+
+Geolocation API
+Access User Location
+
+Media API
+Access Device Camera and Microphone
+
+PWAs and SPAs
+SPAs can become great PWAs but you can also turn ANY other webpage/app into a PWA!
+
+Progressive Enhancement
+
+
+Application Manifest -> Service Worker -> Promises & Fetch apis -> Service Workers(Offline access caching) -> Advance Caching -> Caching dynamic with IndexedDB
+-> Responsive Design -> Background Sync -> Web Push Notifications -> Media API(Camera) & Geolocation -> Automated SW management -> SPAs and PWAs with your framework
+
+
+PWA (Microsoft Developers)
+Ch1: Service Workers
+Ch2: Building PWAs with Developer Tools
+Ch3: PWA Advanced Capabilities
+
+How do PWAs compare to Native Web Apps ? 
+Native Web Apps need their own language, needs to be compiled and packaged. PWAs uses html, js, css.
+
+How do PWAs compare to Websites ? 
+Pretty much same but have additional properties like own window, own icon, advanced capabilities. 
+
+What capabilities of PWAs have ?
+
+PWAs share information with other apps.
+Offline support.
+service worker
+
+Can PWAs really do as much  as web apps ? 
+Web Assembly, Wasm
+low level hardware access
+
+How do create a PWA ? 
+Html, Css, Javascript -> working knowledge
+Manifest, Sw, Https -> Building blocks
+
+Can PWAs be distributed in app stores ? 
+
+
+Service Workers
+Listenable Events
+
+Fetch                 
+Browser or Page-related Javascript initiates a Fetch request.
+Push Notifications
+Service Worker receives Web Push Notification
+Notification Interaction
+User interacts with displayed notification.
+(Not in normal javascript because a tab might not be opened)
+Background Sync
+(Store a action when offline and execute when online)
+(Service Worker receives Background Sync Event)
+Service Worker Lifecycle
+Service Worker Phase Change
+
+
+Service Worker Life Cycle
+
+index.html -> loads -> app.js
+app.js -> registers -> serviceWorker.js (registered as background process)
+browser installs service worker -> install event
+activation (no old service worker instance running)
+(Service Worker now control all pages of scope)
+idle mode
+terminated -> sleeping, wake up automatically on event
+
+sw.js change 1 byte or more -> installed again on refresh
+
+Service Worker Browser Support
+
+
+Two types of caches in browser
+1. Default Browser Cache
+2. Service Worker Cache
+
+Service worker scope is the folder in which it is defined.
+
+
