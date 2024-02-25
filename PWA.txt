@@ -61,10 +61,25 @@ Can PWAs be distributed in app stores ?
 Service Workers
 Listenable Events
 
-Fetch                 
+All javascript files run on a single thread
+Service Worker don't share the thread on which javascript runs.
+Decoupled from html page.
+Manages All pages of web application.
+Lives on even after pages have been closed.
+Background processes.
+Good at listening to events.
+
+Fetch can be due to image resource on html.
+Any http request sent by browser goes through service worker.
+Ajax doesnot use fetch.
+Service Workers can act as proxy.
+
+
+
 Browser or Page-related Javascript initiates a Fetch request.
 Push Notifications
 Service Worker receives Web Push Notification
+Background Synchronization
 Notification Interaction
 User interacts with displayed notification.
 (Not in normal javascript because a tab might not be opened)
@@ -79,10 +94,12 @@ Service Worker Life Cycle
 
 index.html -> loads -> app.js
 app.js -> registers -> serviceWorker.js (registered as background process)
+Two life cycle events
 browser installs service worker -> install event
-activation (no old service worker instance running)
+activation (activated if no old service worker instance running)
 (Service Worker now control all pages of scope)
 idle mode
+only install when sw.js changes by 1 bit or more.
 terminated -> sleeping, wake up automatically on event
 
 sw.js change 1 byte or more -> installed again on refresh
@@ -96,4 +113,7 @@ Two types of caches in browser
 
 Service worker scope is the folder in which it is defined.
 
+service worker only works for Https
+no dom access in service worker.
 
+Polyfills are methods for apis not supported by older browsers.
